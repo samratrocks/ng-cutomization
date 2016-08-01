@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html ng-app="myCalculator">
+<html >
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,86 +7,74 @@
 <script type="text/javascript" src="assets/angular.min.js" ></script>
 <script type="text/javascript" src="assets/calculator.js" ></script>
 
-<title>Calculator</title>
+<title>Sam Store</title>
 </head>
-<body>
+<body ng-app="myCalculator">
 
-<div id="myCalculator" ng-controller="CalcCtrl">
+<header>
+
+</header>
+<div id="store" ng-controller="MainCtrl">
 
 <main>
 
-<section class="inc">
-<div>
-<h4>Incandescent</h4>
-<p>{{ inc_wattage }}</p>
-<p> {{ inc_price }} </p>
-</div>
-</section>
-
-
-<section class="hal">
-
-<div>
-<h4>Halogen</h4>
-<p> {{ hal_wattage }} </p>
-<p> {{ hal_price }} </p>
-</div>
-</section>
-
-
-<section class="cfl">
-
-<div>
-<h4>CFl</h4>
-<p>20.0</p>
-<p>2.63</p>
+<div class="left-side">
+	<h1>Baron Fig for Business</h1>
+	<img src= "assets/images/Confidant_LG_v02.jpg" >
 </div>
 
 
-</section>
+
+<div class="right-side">
+	<div>
+		<h3>Select a Notebook</h3>
+		<form>
+			<input type="radio" name="notebookType" value="confidant">Hardcover Confidant <br />
+			<input type="radio" name="notebookType" value="vanguard">Softcover Vanguard <br />
+		</form>
+	</div>
+
+	<div>
+		<h3>Select a Color</h3>
+		<form>
+			<input type="radio" name="notebookType" value="confidant">Hardcover Confidant <br />
+			<input type="radio" name="notebookType" value="vanguard">Softcover Vanguard <br />
+		</form>
+	</div>
 
 
-<section class="led">
+	<div>
+		<h3>Select a Paper Type</h3>
+		<form>
+			<input type="radio" name="notebookType" value="confidant">Hardcover Confidant <br />
+			<input type="radio" name="notebookType" value="vanguard">Softcover Vanguard <br />
+		</form>
+	</div>
 
-<div>
-<h4>LED</h4>
-<p> {{ led_wattage }} </p>
-<p> {{ led_price }} </p>
+
+
+	<div>
+		<h3>Select a Quantity</h3>
+		<form>
+			<input type="radio" name="notebookType" value="confidant">Hardcover Confidant <br />
+			<input type="radio" name="notebookType" value="vanguard">Softcover Vanguard <br />
+		</form>
+	</div>
+
+		<button>Add to Cart</button>
+
+
+	
 </div>
 
 
-</section>
 
-
-</main>
-
-
-<form>
-<div>
-	<h4>Lumen</h4>
-	<p>Brightness <br/> of Bulb</p>
-	<select ng-change="calculate()" ng-model="current_lumens" ng-options="o as o for o in lumen_options">
-	</select>
-</div>	
-
-<div>
-	<h4>kWH</h4>
-	<p>Kilowatt-<br/>hr cost</p>
-	<input type="number" ng-change="calculate()" ng-model="current_cost" value="{{ current_cost }}"> cents
+<div class="features">
 </div>
 
 
-<div>
-	<h4>Hours</h4>
-	<p>Usage <br/>per day</p>
-	<input type="number" ng-change="calculate()" ng-model="current_hours" value="{{ current_hours }}"> hours 
-
-</div>
-</form>			
-
-
-
-</div>
+<footer>
+</footer>
 
 </body>
 </html>
